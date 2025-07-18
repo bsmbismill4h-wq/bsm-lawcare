@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BSM LawCare</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; color: #222; }
+    header { background: linear-gradient(120deg, #1f2a44, #a6853b); padding: 2rem; text-align: center; color: white; }
+    .logo-animated { max-width: 120px; animation: spin 10s infinite linear; border-radius: 50%; box-shadow: 0 0 20px rgba(0,0,0,0.3); }
+    @keyframes spin { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+    section { padding: 2rem; max-width: 1000px; margin: auto; }
+    h2 { color: #1f2a44; border-bottom: 2px solid #ddd; padding-bottom: 0.3rem; }
+    .card { background: white; border-radius: 10px; padding: 1rem; margin: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .team-grid { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-around; }
+    .team-member {
+      flex: 1 1 250px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .team-member:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+    .team-member img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .team-info { padding: 1rem; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 0.75rem; margin: 0.5rem 0;
+      border: 1px solid #ccc; border-radius: 6px;
+    }
+    .contact-form button {
+      background-color: #a6853b; color: white; padding: 0.7rem 1.5rem;
+      border: none; border-radius: 6px; cursor: pointer;
+    }
+    iframe { width: 100%; border: 0; border-radius: 10px; height: 300px; margin-bottom: 1.5rem; }
+    .whatsapp-btn {
+      position: fixed; bottom: 20px; right: 20px;
+      background: #25D366; color: white; padding: 12px 18px;
+      border-radius: 50px; font-weight: bold; text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3); z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://raw.githubusercontent.com/bsmbismill4h-wq/bsm-lawcare/main/lv_0_20250715214322.gif" class="logo-animated" alt="Logo BSM" />
+  <h1>BSM LawCare</h1>
+  <p>Layanan Hukum Profesional & Terpercaya</p>
+</header>
+
+<section>
+  <h2>Tentang Kami</h2>
+  <div class="card">
+    <p>BSM LawCare adalah firma hukum yang berdedikasi memberikan pelayanan hukum menyeluruh dan terpercaya kepada klien individu maupun korporasi.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Layanan Hukum</h2>
+  <div class="card">Konsultasi & Nasihat Hukum</div>
+  <div class="card">Pendampingan Sengketa, Litigasi, Mediasi</div>
+  <div class="card">Pembuatan & Review Kontrak</div>
+  <div class="card">Pengurusan Perizinan Usaha & Legalitas</div>
+  <div class="card">Hukum Pidana, Perdata, Keluarga, Waris</div>
+</section>
+
+<section>
+  <h2>Tim Advokasi Kami</h2>
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="https://raw.githubusercontent.com/bsmbismill4h-wq/bsm-lawcare/main/IMG-20220711-WA0050.jpg" alt="Muhammad Husnul Yakin" />
+      <div class="team-info">
+        <h3>Muhammad Husnul Yakin, S.H.</h3>
+        <p>Managing Partner</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <img src="https://raw.githubusercontent.com/bsmbismill4h-wq/bsm-lawcare/main/1711255064603.jpg" alt="Saidil Alim" />
+      <div class="team-info">
+        <h3>Saidil Alim, S.H.</h3>
+        <p>Senior Associate</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <img src="https://raw.githubusercontent.com/bsmbismill4h-wq/bsm-lawcare/main/1711255011189.jpg" alt="Yusuf" />
+      <div class="team-info">
+        <h3>Yusuf, S.H., M.Kn.</h3>
+        <p>Spesialis Hukum Pertanahan & Kenotariatan</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Hubungi Kami</h2>
+  <div class="card contact-form">
+    <form action="https://formsubmit.co/bsm.bismill4h@gmail.com" method="POST" target="_blank">
+      <input type="text" name="name" placeholder="Nama Anda" required />
+      <input type="email" name="email" placeholder="Email Anda" required />
+      <textarea name="message" placeholder="Pesan atau pertanyaan..." required></textarea>
+      <button type="submit">Kirim via Email</button>
+    </form>
+  </div>
+</section>
+
+<section>
+  <h2>Lokasi Kantor</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.1923230102407!2d112.73881607501758!3d-7.546309192466661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e162ae2641f3%3A0x1ff4d56b2e6b9e46!2sBSM%20LawCare%20-%20Sidoarjo!5e0!3m2!1sid!2sid!4v1721287410000" allowfullscreen loading="lazy"></iframe>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.446499384103!2d112.70140857501832!3d-7.627804292340384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e34678a1f287%3A0x4a75d47128c4d194!2sGedangan%2C%20Kabupaten%20Sidoarjo!5e0!3m2!1sid!2sid!4v1721287500000" allowfullscreen loading="lazy"></iframe>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.4733650452824!2d112.73000007501657!3d-7.420000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjUnMTIuMCJTIDExMsKwNDMnNDguMCJF!5e0!3m2!1sid!2sid!4v1721301111111" allowfullscreen loading="lazy"></iframe>
+</section>
+
+<a href="https://wa.me/6285850473256" class="whatsapp-btn" target="_blank">Chat via WhatsApp</a>
+
+</body>
+</html>
