@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BSM LawCare</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111;
+      --accent: #007bff;
+    }
+    body.dark {
+      --bg: #121212;
+      --text: #f0f0f0;
+      --accent: #66ccff;
+    }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    header, footer {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    .hero {
+      background: url('https://via.placeholder.com/1200x500') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      padding: 0 1em;
+    }
+    .btn, button {
+      background: var(--accent);
+      color: white;
+      padding: 0.7em 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0.5em;
+    }
+    section { padding: 2em 1em; max-width: 1200px; margin: auto; }
+    .cards { display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; }
+    .card {
+      background: #f0f0f0;
+      padding: 1em;
+      border-radius: 8px;
+      text-align: center;
+      flex: 1 1 250px;
+    }
+    .card img { width: 50px; }
+    .slider { max-width: 700px; margin: auto; }
+    .slide { display: none; text-align: center; }
+    .slide.active { display: block; }
+    .faq-question { width: 100%; text-align: left; background: #eee; padding: 1em; border: none; cursor: pointer; }
+    .faq-answer { display: none; padding: 0.5em 1em; background: #fafafa; }
+    form { display: grid; gap: 1em; max-width: 500px; margin: auto; }
+    input, textarea { padding: 0.7em; border: 1px solid #ccc; border-radius: 4px; width: 100%; }
+    .toggle-area { text-align: center; margin-bottom: 1em; }
+    iframe { width: 100%; height: 300px; border: 0; }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 600px) {
+      .cards { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span data-en="Welcome to BSM LawCare" data-id="Selamat Datang di BSM LawCare">Welcome to BSM LawCare</span></h1>
+    <div class="toggle-area">
+      <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+      <button onclick="toggleLang()">🌐 ID / EN</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2 data-en="Professional Legal Support" data-id="Dukungan Hukum Profesional">Professional Legal Support</h2>
+    <p data-en="For Your Peace of Mind" data-id="Untuk Ketentraman Anda">For Your Peace of Mind</p>
+    <a href="#services" class="btn" data-en="Explore Our Services" data-id="Lihat Layanan Kami">Explore Our Services</a>
+  </section>
+
+  <section id="services">
+    <h2 data-en="Our Services" data-id="Layanan Kami">Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/50" />
+        <h3 data-en="Legal Consulting" data-id="Konsultasi Hukum">Legal Consulting</h3>
+        <p data-en="Expert counsel tailored to your business needs." data-id="Nasihat ahli yang disesuaikan dengan kebutuhan bisnis Anda."></p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/50" />
+        <h3 data-en="Contract Drafting" data-id="Pembuatan Kontrak">Contract Drafting</h3>
+        <p data-en="Clear, enforceable agreements for peace of mind." data-id="Perjanjian yang jelas dan dapat ditegakkan demi ketenangan Anda."></p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/50" />
+        <h3 data-en="Litigation Support" data-id="Dukungan Litigasi">Litigation Support</h3>
+        <p data-en="Strategic representation in court and arbitration." data-id="Perwakilan strategis di pengadilan dan arbitrase."></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2 data-en="What Our Clients Say" data-id="Apa Kata Klien Kami">What Our Clients Say</h2>
+    <div class="slider">
+      <div class="slide active"><blockquote>"BSM LawCare helped us navigate complex regulations efficiently."</blockquote></div>
+      <div class="slide"><blockquote>"Truly professional and responsive legal services."</blockquote></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2 data-en="Frequently Asked Questions" data-id="Pertanyaan Umum">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-question" data-en="What areas do you serve?" data-id="Wilayah mana saja yang Anda layani?"></button>
+      <div class="faq-answer" data-en="We serve nationwide across Indonesia." data-id="Kami melayani seluruh wilayah Indonesia."></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" data-en="How to get started?" data-id="Bagaimana cara memulai?"></button>
+      <div class="faq-answer" data-en="Contact us to schedule a consultation." data-id="Hubungi kami untuk menjadwalkan konsultasi."></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 data-en="Contact Us" data-id="Hubungi Kami">Contact Us</h2>
+    <form>
+      <label><span data-en="Full Name" data-id="Nama Lengkap">Full Name</span><input type="text" required></label>
+      <label><span data-en="Email Address" data-id="Alamat Email">Email Address</span><input type="email" required></label>
+      <label><span data-en="Phone Number" data-id="Nomor Telepon">Phone Number</span><input type="tel"></label>
+      <label><span data-en="Message" data-id="Pesan">Message</span><textarea rows="5" required></textarea></label>
+      <button type="submit" data-en="Submit" data-id="Kirim">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h2 data-en="Our Office Location" data-id="Lokasi Kantor Kami">Our Office Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.224744620681!2d112.618637!3d-7.215688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbc9d26a8c4d%3A0x8ef3b7f7eb6a58a2!2sSurabaya!5e0!3m2!1sen!2sid!4v1610000000000!5m2!1sen!2sid" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BSM LawCare. All rights reserved.</p>
+  </footer>
+
+  <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank" title="Chat WhatsApp">💬</a>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+
+    function toggleLang() {
+      const currentLang = document.documentElement.lang === 'en' ? 'id' : 'en';
+      document.documentElement.lang = currentLang;
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerText = el.dataset[currentLang];
+      });
+    }
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const ans = btn.nextElementSibling;
+        ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
+      });
+      btn.innerText = btn.dataset.en;
+      btn.nextElementSibling.innerText = btn.nextElementSibling.dataset.en;
+    });
+
+    // Testimonial slider
+    let idx = 0;
+    const slides = document.querySelectorAll('.slide');
+    setInterval(() => {
+      slides[idx].classList.remove('active');
+      idx = (idx + 1) % slides.length;
+      slides[idx].classList.add('active');
+    }, 4000);
+  </script>
+</body>
+</html>
